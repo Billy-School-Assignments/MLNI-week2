@@ -35,8 +35,6 @@ export abstract class Particle {
     this.posY = originY;
     this.speedX = generateSpeed();
     this.speedY = generateSpeed();
-    console.log(this.speedX);
-    console.log(this.speedY);
     this.color = generateColor();
     this.width = generateWidth();
   }
@@ -84,7 +82,6 @@ class Circle extends Particle {
 }
 
 export default function generateParticle(originX: number, originY: number): Particle {
-  console.log('new');
   if (Math.random() > 0.5) {
     return new Circle(originX, originY);
   }
